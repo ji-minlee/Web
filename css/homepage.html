@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+</head>
+<style>
+  /* background-size cover : 전체 화면으로 , background-attachement fixed : 고정 */
+  body {
+    margin: 0px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/09/08/12/00/stars-1654074_960_720.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  /* justify-content space-between : 가로축 기준으로 좌우 정렬,요소들 사이에 일정한 간격 */
+  /* align-items center : 세로축을 기준으로 정렬, 세로축의 중앙으로 정렬 */
+  /* cursor : 해당 태그에 위치하는 마우스 모양을 바꿀 수 있다. > pointer : 손가락 모양 */
+  header {
+    height: 75px;
+    padding: 1rem;
+    color: white;
+    background: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  div.main {
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    font-size: 2em;
+    
+  }
+  .main .content {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .main .blank {
+    display:inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .button {
+    background-color: white;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>
+<body>
+  <header>
+    <h1>My page</h1>
+    <nav>
+      <span>Home</span>&nbsp&nbsp&nbsp&nbsp
+      <span>About</span>&nbsp&nbsp&nbsp&nbsp
+      <span>Projects</span>&nbsp&nbsp&nbsp&nbsp
+      <span>Contact</span>
+    </nav>
+  </header>
+  <div class="main" >
+    <span class="blank"></span>
+    <span class="content"> <br>안녕하세요, 제 이름은 <span style="background-color: yellowgreen;">이지민</span>입니다. <br><br><br>
+    <button class="button">View my work</button></span>
+    
+  </div>
+  
+</body>
+</html>
