@@ -1,0 +1,46 @@
+div {
+  background-color: aqua;
+  height: 300px;
+}
+
+body {
+  background-color: black;
+  font-family: Noto Sans Korean;
+}
+
+p {
+  color: blue;
+}
+/* .은 class 셀렉터 */
+.red-text {
+  color: red;
+}
+
+.yellow-text {
+  color: yellow;
+}
+
+.big-size {
+  font-size: 50px;
+}
+
+.border {
+  border-style: dashed;
+  border-width: 1px;
+}
+
+/* #: id 지정 > 잘 사용하지 않음 */
+#div1 {
+  background-color: tomato;
+}
+
+/* 링크에 밑줄 없애기 */
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+/* 마우스 가져다 대는 것 : hover  */
+a:hover {
+  color:white;
+}
