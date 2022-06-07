@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습7</title>
+  </head>
+  <body>
+    <h1>회원 가입</h1>
+    <br><br>
+    <form action="">
+      <input type="text" placeholder="이름" style="width: 340px; height: 20px; font-size: medium;">
+      <br><br>
+      <input type="text" placeholder="아이디" style="width: 340px; height: 20px; font-size: medium;">
+      <br><br>
+      <input type="password" placeholder="비밀번호" style="width: 340px; height: 20px; font-size: medium;">    <a href="https://privacy.go.kr/a3sc/per/chk/examInfoViewCQ4.do" target="_blank" style="font-size:small">비밀번호 도움말</a>
+      <br><br>
+      <input type="password" placeholder="비밀번호 재입력" style="width: 340px; height: 20px; font-size: medium;">
+      <br><br>
+      <select name="mobile" id="" style="height: 25px;">
+        <option value="none">휴대폰 번호</option>
+        <option value="010">010</option>
+      </select>
+      <!-- pattern="\d*" : 숫자만 가능 -->
+      - <input type="text" pattern="\d*" style="height: 20px; width: 100px;"> - <input type="text" pattern="\d*" style="height: 20px; width: 100px;">
+      <br><br>
+      <!-- pattern : 영어, 숫자만 가능 -->
+      <input type="text" placeholder="이메일" pattern="^[a-zA-Z0-9]+$" style="width: 163px; height: 20px; font-size: medium;">
+      @ <select name="email" id="" style="height: 25px; width: 150px; font-size: medium;">
+        <option value="none">선택</option>
+        <option value="naver">naver.com</option>
+        <option value="daum">daum.net</option>
+        <option value="gmail">gmail.com</option>
+      </select>
+      <br><br>
+      <select name="phone" id="" style="height: 25px; width: 95px;" disabled>
+        <option value="none">전화번호</option>
+        <option value="seoul">02</option>
+        <option value="gyeong-gi">031</option>
+        <option value="daegu">053</option>
+      </select>
+      - <input type="text" pattern="\d*" style="height: 20px; width: 100px;" disabled> - <input type="text" pattern="\d*" style="height: 20px; width: 100px;" disabled>
+      <br><br>
+      <select name="mobileAuthentication" id="" style="height: 25px;">
+        <option value="none">휴대폰 번호</option>
+        <option value="010">010</option>
+      </select>
+      - <input type="text" pattern="\d*" style="height: 20px; width: 100px;"> - <input type="text" pattern="\d*" style="height: 20px; width: 100px;"> 
+      <button>휴대폰 인증</button>
+      <br><br>
+      <input type="radio" name="authentication" id="" value="this">
+      <label for="this" style="font-size: small;">인증받은 휴대폰 번호를 대표번호로 사용</label>
+      <input type="radio" name="authentication" id="" value="another">
+      <label for="another" style="font-size: small;">다른번호 등록</label>
+      <input type="radio" name="authentication" id="" value="next">
+      <label for="next" style="font-size: small;">다음에 등록</label>
+      <br><br>
+      <input type="text" placeholder="우편번호" pattern="\d*" style="height: 20px; width: 200px;">
+      <button onclick="window.open('https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm')">주소찾기</button>
+      <br><br>
+      <input type="text" placeholder="주소" style="height: 20px; width: 340px;">
+      <br>
+      <input type="text" placeholder="상세주소" style="height: 20px; width: 340px;">
+      <br><br><br><br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="button" value="가입신청" style="background-color: red; width:100px; height: 30px;">
+      <input type="button" value="취소" style=" width:100px; height: 30px;">
+    </form>
+   
+  </body>
+</html>
