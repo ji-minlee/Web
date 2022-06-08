@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body onload="init()">
+  <style>
+    .small-text {
+      font-size: small;
+    }
+
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+  </style>
+  <!-- #target + enter -->
+  <div id="target" class="small-text">Hello</div>
+  <!-- ul>li.item*4 (emmet) -->
+  <ul>
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+  </ul>
+
+  <button onclick="changeStyle()">스타일 변경</button>
+  <button onclick="changeClass()">클래스 변경</button>
+  <button id="my_button">코드로 이벤트 연결</button>
+
+  <div id="box" onmouseover="onMouseOver()" onmouseleave="onMouseLeave"></div>
+
+
+  <script>
+    function onMouseOver() {
+      console.log('onMouseOver!')
+    }
+
+    function onMouseLeave() {
+      console.log('onMouseLeave!')
+    }
+
+    function init() {
+      console.log('init!!!');
+
+      //이벤트 작성
+      let $button = document.getElementById('my_button');
+      $button.addEventListener('click', function() {
+        console.log('Click!!');
+      })
+    }
+
+    //태그를 불러와 요소 객체로 반환
+    function changeStyle() {
+      let $target = document.getElementById('target');
+      $target.style.color = 'yellow';
+    }
+
+    function changeClass() {
+      let $target = document.getElementById('target');
+      $target.className = "red blue";
+    }
+
+    
+    //DOM 객체에 접근
+    let $target = document.getElementById('target');
+    // 
+    let text = document.getElementsByClassName('item');
+    
+    //
+    document.getElementsByClassName('target').innertext="5";
+    
+    //css의 셀렉터 그대로 활용할 수 있다
+    //document.querySelector('#target')
+    //document.querySelector('#target')
+
+    //write : 화면에 글자쓰기
+    //document.write('hello World');
+
+    console.log('body 완료!!!')
+  </script>
+</body>
+</html>
