@@ -1,0 +1,91 @@
+
+body {
+  overflow-x: hidden;
+}
+#score {
+  position: relative;
+  color: white;
+}
+.container {
+  /* border: 1px black solid; */
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+#start {
+  width: 100%;
+  height: 600px;
+  background-image: url("../assets/background.png");
+  /* background-color: black; */
+  color: white;
+  text-align: center;
+  line-height: 200px;
+}
+
+#gameOver {
+  width: 100%;
+  height: 600px;
+  background-image: url("../assets/background.png");
+  /* background-color: black; */
+  color: white;
+  text-align: center;
+  line-height: 200px;
+}
+
+#mario {
+  width: 200px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+#goomba {
+  width: 150px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+#killer {
+  position: absolute;
+  width: 150px;
+  left: 220px;
+  bottom: 70px;
+  display: none;
+}
+
+#basic_screen {
+  position: absolute;
+  left: 30%;
+  top: 15%;
+}
+
+.background {
+  position: absolute;
+  background-image: url('../assets/background.png');
+  width: 200%;
+  height: 600px;
+ 
+  animation: slide 3s linear infinite;
+}
+
+.enter {
+  width: 80px;
+  height: 45px;
+}
+
+.again {
+  width: 80px;
+  height: 45px;
+}
+
+@keyframes slide {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: -100%;
+  }
+}
