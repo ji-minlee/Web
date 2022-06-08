@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jquery CDN uncompressed 불러오기 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <title>체크박스</title>
+</head>
+<body>
+  <style>
+    table,tr,th,td{
+      border: 1px black solid;
+    }
+
+    table {
+      width: 600px;
+    }
+  </style>
+  <!-- table>tr*7>td*3 -->
+  <table>
+    <tr>
+      <!-- th : 진하게  -->
+      <th>
+        <!-- onclik으로 check시에 일어날 두 함수 설정 -->
+        <input type="checkbox" name="all" id="all" onclick="allcheck(); nonecheck();">확인
+      </th>
+      <th>제목</th>
+      <th>글 쓴 시간</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>1111111</td>
+      <td>11:11:11</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>222222</td>
+      <td>11:11:11</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>333</td>
+      <td>11:11:11</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td id="title">4444</td>
+      <td>11:11:11</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td id="title">55555</td>
+      <td>11:11:11</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td id="title">666666</td>
+      <td>11:11:11</td>
+    </tr>
+  </table>
+
+  <div>
+    <input id="log_button" type="button" value="로그">
+  </div>
+
+  <script>
+    // 확인 옆 체크박스 체크 시 모두 체크
+    function allcheck() {
+      if($('input:checkbox[name=all]:checked').length == 1) {
+        $('input:checkbox[name=chk]').prop('checked',true);
+      }
+    }
+    // 확인 옆 체크박스 체크 안하면 아무 것도 체크 되지 않음
+    function nonecheck() {
+      if($('input:checkbox[name=all]:checked').length == 0) {
+        $('input:checkbox[name=chk]').prop('checked',false);
+      }
+    }
+
+    //체크한 제목 로그 찍기
+    $("#log_button").click(function () {
+      $("input[name='chk']:checked").each(function () {
+            console.log($(this).parent().next().text());
+      })
+    });
+
+    /*$('#log_button').click(function () {
+      if ($('input[name=chk]:checked').length > 0) {
+        $("input[name='chk']:checked").each(function() {
+          console.log($(this).parent().next().text());
+      }) else {
+        alert('선택된 체크박스가 없습니다');
+      }
+    }
+  }; */
+
+  
+
+    /*function nobutton() {
+      if($('input:checkbox[name=chk]:checked').length == 0) {
+        alert("선택이 없습니다.");
+      }
+    }
+   
+    
+
+    // 체크 된 value 값 가져오기
+    function yesbutton() {
+      $("input[name='chk']:checked").each(function(e){
+          console.log(`체크된 박스의 값: ${$(this).val()}`)
+      });
+   }*/
+  </script>
+</body>
+</html>
