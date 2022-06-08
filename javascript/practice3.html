@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습3</title>
+</head>
+<body align="center">
+  <script>
+    let text = prompt('텍스트를 입력하세요');
+    
+    // if - else문
+    if(text == "") { 
+      alert("텍스트를 입력해주세요"); 
+      text = prompt('텍스트를 입력하세요');
+    }
+
+    console.log(text);
+
+    document.write("<div id='target'><h1>"+text+"</h1></div>");
+    document.write("<button onclick='changeRed()'>빨강</button>&nbsp");
+    document.write("<button onclick='changeGreen()'>초록</button>&nbsp");
+    document.write("<button onclick='changeBlue()'>파랑</button>");
+
+    function changeRed() {
+      let $target = document.getElementById('target');
+        target.style.color='red';
+      alert("빨강색으로 변경됩니다.");
+    }
+
+    function changeGreen() {
+      let $target = document.getElementById('target');
+        target.style.color='green';
+      alert("초록색으로 변경됩니다.");
+    }
+
+    function changeBlue() {
+      let $target = document.getElementById('target');
+        target.style.color='blue';
+      alert("파랑색으로 변경됩니다.");
+    }
+  </script>
+  
+</body>
+</html>
