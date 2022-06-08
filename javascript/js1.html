@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- 버튼 누르면 greeting 함수 실행  -->
+  <button onclick="greeting()">인사</button>
+  <script>
+    // const : 상수
+    const NUM = 10;    
+    // var는 두번 선언해도 오류 표시가 없다 > let은 재선언이 불가하다 
+    let i = 10;
+    i = 20;
+    console.log(i);
+
+    //변수 타입이 중간에 변하는 것을 잡지 못한다. 주의해야!
+    //타입 : number, string, boolean 등
+    let num = 10;
+    //num = 'hello';
+    let text = 'Hello';
+    //text = 10;
+
+    //문자열 병합
+    let name = '이지민';
+    let age = 29;
+    let result = name + '는' + age + '살입니다.';
+    result = `${name}는 ${age}살입니다`;
+
+    //for 문
+    let items = [1,2,3,4];
+    for (let i = 0; i < items.length; i++) {
+      console.log(items[i]);
+    }
+
+    for (let item in items) {
+      console.log(item);
+    }
+
+    //object, JSON 형태
+    let person = {
+      name: '이지민',
+      age: 29
+    };
+
+    console.log(person);
+
+    // 로그 : 프로그램의 흐름을 확인하기 위해 남기는 기록, 개발을 하기 전 가장 먼저 설계해야하는 목표
+    function myFunc(num) {
+      console.log(num);
+    }
+
+ 
+  </script>
+</body>
+</html>
