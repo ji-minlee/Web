@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습4</title>
+</head>
+<body>
+  <!-- 스타일 지정하기 : 배경색, 글자색, 넓이, 높이, 폰트 사이즈 -->
+  <style>
+    .setting {
+      background-color: gray;
+      color: white;
+      width: 200px;
+      height: 50px;
+      font-size: large;
+    }
+  </style>
+  <script>
+    // 버튼 만들기 : id, class, onclick 지정
+    document.write("<button id='html' class='setting' onclick='changeHtml()'>html</button>&nbsp&nbsp");
+    document.write("<button id='css' class='setting' onclick='changeCss()'>css</button>&nbsp&nbsp");
+    document.write("<button id='js' class='setting' onclick='changeJs()'>javascript</button>");
+    
+    //DOM 객체에 접근
+    let $html = document.getElementById('html');
+    let $css = document.getElementById('css');
+    let $js = document.getElementById('js');
+
+    //html 버튼 함수
+    function changeHtml() { 
+      $html.style.color = 'black';
+      $html.style.backgroundColor = 'white';
+      $css.style.color = 'white';
+      $css.style.backgroundColor = 'gray';
+      $js.style.color = 'white';
+      $js.style.backgroundColor = 'gray';
+    }
+     //css 버튼 함수
+    function changeCss() { 
+      $css.style.color = 'black';
+      $css.style.backgroundColor = 'white';
+      $html.style.color = 'white';
+      $html.style.backgroundColor = 'gray';
+      $js.style.color = 'white';
+      $js.style.backgroundColor = 'gray';
+    }
+    //js 버튼 함수
+    function changeJs() { 
+      $js.style.color = 'black';
+      $js.style.backgroundColor = 'white';
+      $html.style.color = 'white';
+      $html.style.backgroundColor = 'gray';
+      $css.style.color = 'white';
+      $css.style.backgroundColor = 'gray';
+    }
+  </script>
+</body>
+</html>
