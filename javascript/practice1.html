@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습1</title>
+</head>
+<body>
+  <script>
+    // 이름을 입력 받는다. 
+    // prompt : 외부입력 창 실행
+    let text = prompt('이름을 입력하세요');
+    console.log(text);
+    // if - else문
+    if(text == "") {  //이름이 입력되지 않았을 때
+      // alert : 경고창
+      // 입력을 다시 요청하고 다시 입력 받는다
+      alert("이름을 입력해주세요"); 
+      text = prompt('이름을 입력하세요');
+      console.log(text);
+      alert(`${text}님 안녕하세요`); 
+    } else {  //이름이 입력되었을 때
+      // 로그에 이름을 띄우고 경고창으로 ..님 안녕하세요를 띄운다
+      alert(`${text}님 안녕하세요`); 
+    }
+  
+  </script>
+</body>
+</html>
