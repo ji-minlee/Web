@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jquery CDN uncompressed 불러오기 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    #container {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border: 1px black solid;
+    }
+
+    #character {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      left: 100px;
+    }
+
+  </style>
+
+  <div id="container">
+    <img id="character" src="./snoopy.jpg" alt="snoopy" >
+  </div>
+
+  <script>
+    let snoopy = $('#character');
+
+    const GAME_WIDTH = 600;
+    const GAME_HEIGHT = 600;
+
+    const MOVE = 25;
+    const CHARACTER_HEIGHT = 100;
+    const CHARACTER_WIDTH = 100;
+
+    //키보드로 조작하기
+    $('body').keydown(function(event) {
+      // number : 숫자로 만들기
+      let top = Number(snoopy.css('top').replace('px',''));
+      let bottom = top + CHARACTER_HEIGHT;
+      let left = Number(snoopy.css('left').replace('px',''));
+      let right = left + CHARACTER_WIDTH;
+      
+      //event.key : 키보드 조작
+      switch(event.key) {
+        case 'ArrowUp':
+          if (top - MOVE <0) {
+            return;
+          } 
+          snoopy.css({ top:'-=25px' });
+          break;
+        case 'ArrowDown':
+          if (bottom + MOVE > GAME_HEIGHT) {
+              return;
+          } 
+          snoopy.css({ top:'+=25px' });
+          break;
+        case 'ArrowLeft':
+          if (left - MOVE <0) {
+            return;
+          }
+          snoopy.css({ left:'-=25px' });
+          break;
+        case 'ArrowRight':
+          if (right + MOVE > GAME_WIDTH) {
+            return;
+          }
+          snoopy.css({ left:'+=25px' });
+          break;
+      };
+    });
+  </script>
+</body>
+</html>          
